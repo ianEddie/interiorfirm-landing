@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets'
+import image from '@assets/contact-image.avif'
+---
+
+<section
+  class='bg-main pl-[130px] pr-[130px] flex justify-between rounded-br-[15em] pb-20'
+>
+  <article class='w-2/3 pt-10 pl-10 flex flex-col items-start gap-y-5'>
+    <h2 class='font-title text-[3rem] max-w-[65%] text-balance'>
+      Intereste in Working with Us?
+    </h2>
+    <p class='font-text text-pretty text-[1.2rem] max-w-[80%]'>
+      Do you have a passion for creating beautiful and functional spaces? If you
+      are interested in working with us, please visit our website and fill out
+      the application form.
+    </p>
+    <button
+      class='bg-primary px-5 py-1 rounded-full text-white font-text font-semibold text-[1.2rem]'
+      >Contact</button
+    >
+  </article>
+  <picture>
+    <Image
+      src={image}
+      alt='Image about interior design'
+      width={image.width}
+      height={image.height}
+      loading='lazy'
+      class='rounded-br-[15em] h-[380px] w-[250px] object-cover border-x border-stone-400'
+    />
+  </picture>
+</section>

@@ -1,0 +1,35 @@
+---
+import QuoteIcon from '@icons/quote-icon.astro'
+import image from '@assets/user-image.avif'
+import { Image } from 'astro:assets'
+---
+
+<section class='mr-[130px] border-t border-r border-stone-400'>
+  <article
+    class='flex justify-between items-center ml-[130px] pr-10 pt-10 border-l border-stone-400 pl-10'
+  >
+    <h2 class='font-title text-[3.5rem] max-w-[50%]'>
+      Our Customers Feedback.
+    </h2>
+    <QuoteIcon />
+  </article>
+  <article class='ml-[130px] border-l border-stone-400 flex py-10'>
+    <picture class=''>
+      <Image
+        src={image}
+        alt='Image of a user'
+        width={image.width}
+        height={image.height}
+        class='h-auto w-[220px]'
+        loading='lazy'
+      />
+    </picture>
+    <div class='flex flex-grow flex-col justify-center items-center gap-y-10'>
+      <p class='font-text text-[1.7rem] text-pretty w-[70%]'>
+        “ Amaizing fast and reliable customer support! The team of willing to go
+        mile for customer service! ”
+      </p>
+      <h3 class='w-[70%] font-main'>Jordyn Dorwart</h3>
+    </div>
+  </article>
+</section>

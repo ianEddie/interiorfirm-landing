@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets'
+import imageLeft from '@assets/about-image-left.avif'
+import imageRight from '@assets/about-image-right.avif'
+---
+
+<article
+  class='flex justify-end gap-x-10 relative w-[55%] border-l border-stone-400 pb-20'
+>
+  <Image
+    src={imageLeft}
+    alt='Image about interior design'
+    width={imageLeft.width}
+    height={imageLeft.height}
+    loading='lazy'
+    class='absolute left-0 -top-[120px]'
+  />
+  <Image
+    src={imageRight}
+    alt='Image about interior design'
+    width={imageRight.width}
+    height={imageRight.height}
+    loading='lazy'
+  />
+</article>

@@ -1,0 +1,22 @@
+---
+import { SERVICES_DATA } from 'src/constants/services-data.astro'
+---
+
+<section
+  class='flex flex-col pl-[130px] mr-[130px] border-t border-r border-stone-400'
+>
+  <article class='border-l border-stone-400 pt-10 pl-10'>
+    <h2 class='text-[4rem] max-w-[50%] font-title'>Create your Dream Space.</h2>
+  </article>
+  <article class='flex justify-center py-20 border-l border-stone-400'>
+    {
+      SERVICES_DATA.map((item) => (
+        <div class='flex flex-col gap-y-5 font-main items-center'>
+          <item.icon />
+          <h3 class='font-semibold text-[1.3rem] '>{item.title}</h3>
+          <p class='w-[70%]'>{item.text}</p>
+        </div>
+      ))
+    }
+  </article>
+</section>

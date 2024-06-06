@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-neutral-200/80">
+    <slot />
+  </body>
+</html>
+<style is:global>
+  @font-face {
+    font-family: 'Stardom-Regular';
+    src: url('/fonts/Stardom-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Chillax-Variable';
+    src: url('/fonts/Chillax-Variable.woff2') format('woff2');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Author-Variable';
+    src: url('../fonts/Author-Variable.woff2') format('woff2');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+  }
+</style>

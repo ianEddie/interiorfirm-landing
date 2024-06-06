@@ -1,0 +1,33 @@
+---
+import image from '@assets/hero-image.avif'
+---
+
+<section class='h-screen flex relative border-b border-stone-400'>
+  <article
+    class='bg-main pl-[130px] h-full flex flex-col pt-16 items-start gap-y-8 w-2/3 rounded-tr-[60%]'
+  >
+    <h1 class='font-title text-[5.5rem] text-balance z-10'>
+      Modern Interior Design Service
+    </h1>
+    <p class='max-w-[60%] text-pretty font-text font-medium text-[1.2rem]'>
+      Interiorfirm is an acclaimed multidisciplinary studio specializing in
+      interior architecture, interior design and décor that redefines laid-back
+      luxury.
+    </p>
+    <div class='w-full flex justify-center'>
+      <button
+        class='bg-primary font-text px-5 text-[1.1rem] py-1 text-neutral-50 font-medium rounded-full'
+        >Explore now</button
+      >
+    </div>
+  </article>
+  <article class='-z-0 h-full absolute right-0 flex items-center'>
+    <img
+      src={image.src}
+      alt='Image obout our product'
+      height='500'
+      width='750'
+      class='h-[90%]'
+    />
+  </article>
+</section>
