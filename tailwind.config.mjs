@@ -11,6 +11,10 @@ export default {
         title: ['Stardom-Regular'],
         main: ['Chillax-Variable'],
         text: ['Author-Variable']
+      },
+      boxShadow: {
+        custom: '3px 5px 5px 0px rgb(217, 119, 6, 0.5)',
+        'custom-hover': '3px 5px 5px 0px rgb(87, 83, 78, 0.5)'
       }
     }
   },

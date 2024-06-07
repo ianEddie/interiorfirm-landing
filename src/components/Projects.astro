@@ -1,15 +1,20 @@
 ---
 import image from '@assets/projects-image.avif'
 import { Image } from 'astro:assets'
+import ButtonPrimary from './ButtonPrimary.astro'
 ---
 
-<section class='flex flex-col mr-[130px] border-t border-stone-400'>
-  <article class='ml-[130px] py-10 border-x border-stone-400 pl-10'>
-    <h2 class='text-[3.5rem] font-title text-balance'>
+<section 
+id="projects"
+class='flex flex-col sm:mr-[130px] border-t border-stone-400'>
+  <article
+    class='sm:ml-[130px] py-10 border-x border-stone-400 sm:pl-10 sm:px-0 px-10'
+  >
+    <h2 class='sm:text-[3.5rem] text-[3rem] font-title text-balance'>
       Amazing Projects from Talented Interior Architects.
     </h2>
   </article>
-  <picture class='w-full right-0 pl-14 border-r border-stone-400'>
+  <picture class='w-full right-0 sm:pl-14 border-r border-stone-400'>
     <Image
       src={image}
       alt='Image about interior design'
@@ -20,11 +25,15 @@ import { Image } from 'astro:assets'
     />
   </picture>
   <article
-    class='bg-main ml-14 flex rounded-bl-[20em] pt-5 pb-10 border-r border-stone-400'
+    class='bg-main sm:ml-14 flex sm:flex-row flex-col gap-y-10 rounded-bl-[20em] pt-5 sm:pb-10 pb-20 border-r border-stone-400'
   >
-    <div class='w-2/3 flex flex-col gap-y-3 font-main pl-[15%]'>
-      <h3 class='text-[2.5rem] font-medium'>Modern Style</h3>
-      <p class='text-pretty font-text pr-10 text-[1.2rem]'>
+    <div
+      class='sm:w-2/3 flex flex-col sm:items-start items-center gap-y-3 font-main sm:pl-[15%] pl-10'
+    >
+      <h3 class='sm:text-[2.5rem] text-[2rem] font-medium sm:w-auto w-[70%]'>Modern Style</h3>
+      <p
+        class='text-pretty font-text sm:pr-10 sm:text-[1.2rem] sm:w-auto w-[70%]'
+      >
         The modernist movement began to take shape when it shifted away from
         traditional construction and design elements such as wood, stone, and
         brick and toward industrial materials like as glass, steel, and
@@ -32,10 +41,7 @@ import { Image } from 'astro:assets'
       </p>
     </div>
     <div class='flex-grow flex justify-center items-center'>
-      <button
-        class='bg-primary px-5 py-2 text-white text-[1.3rem] font-text font-medium rounded-full'
-        >Explore</button
-      >
+      <ButtonPrimary>Explore</ButtonPrimary>
     </div>
   </article>
 </section>

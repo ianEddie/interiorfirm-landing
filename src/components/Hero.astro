@@ -1,27 +1,31 @@
 ---
 import image from '@assets/hero-image.avif'
+import ButtonPrimary from './ButtonPrimary.astro'
 ---
 
-<section class='h-screen flex relative border-b border-stone-400'>
+<section
+id="home"
+class='h-screen flex relative border-b border-stone-400'>
   <article
-    class='bg-main pl-[130px] h-full flex flex-col pt-16 items-start gap-y-8 w-2/3 rounded-tr-[60%]'
+    class='bg-main sm:pl-[130px] sm:px-0 px-10 h-full flex flex-col pt-16 items-start sm:justify-start justify-center gap-y-8 sm:w-2/3 w-full rounded-tr-[60%]'
   >
-    <h1 class='font-title text-[5.5rem] text-balance z-10'>
+    <h1 class='font-title sm:text-[5.5rem] text-[3.7rem] text-balance z-10'>
       Modern Interior Design Service
     </h1>
-    <p class='max-w-[60%] text-pretty font-text font-medium text-[1.2rem]'>
+    <p
+      class='sm:max-w-[60%] text-pretty font-text font-medium text-[1.2rem]'
+    >
       Interiorfirm is an acclaimed multidisciplinary studio specializing in
       interior architecture, interior design and décor that redefines laid-back
       luxury.
     </p>
     <div class='w-full flex justify-center'>
-      <button
-        class='bg-primary font-text px-5 text-[1.1rem] py-1 text-neutral-50 font-medium rounded-full'
-        >Explore now</button
-      >
+      <ButtonPrimary> Explore Now </ButtonPrimary>
     </div>
   </article>
-  <article class='-z-0 h-full absolute right-0 flex items-center'>
+  <picture
+    class='h-full absolute right-0 sm:flex hidden items-center justify-end'
+  >
     <img
       src={image.src}
       alt='Image obout our product'
@@ -29,5 +33,5 @@ import image from '@assets/hero-image.avif'
       width='750'
       class='h-[90%]'
     />
-  </article>
+  </picture>
 </section>

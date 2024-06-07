@@ -4,17 +4,17 @@ import image from '@assets/user-image.avif'
 import { Image } from 'astro:assets'
 ---
 
-<section class='mr-[130px] border-t border-r border-stone-400'>
+<section class='sm:mr-[130px] border-t border-r border-stone-400'>
   <article
-    class='flex justify-between items-center ml-[130px] pr-10 pt-10 border-l border-stone-400 pl-10'
+    class='flex justify-between items-center sm:ml-[130px] sm:pr-10 pt-10 sm:px-0 px-10 border-l border-stone-400 pl-10'
   >
-    <h2 class='font-title text-[3.5rem] max-w-[50%]'>
+    <h2 class='font-title sm:text-[3.5rem] text-[3rem] max-w-[50%]'>
       Our Customers Feedback.
     </h2>
     <QuoteIcon />
   </article>
-  <article class='ml-[130px] border-l border-stone-400 flex py-10'>
-    <picture class=''>
+  <article class='sm:ml-[130px] border-l border-stone-400 flex pt-10 pb-20'>
+    <picture>
       <Image
         src={image}
         alt='Image of a user'
@@ -25,11 +25,13 @@ import { Image } from 'astro:assets'
       />
     </picture>
     <div class='flex flex-grow flex-col justify-center items-center gap-y-10'>
-      <p class='font-text text-[1.7rem] text-pretty w-[70%]'>
+      <p
+        class='font-text sm:text-[1.7rem] text-[1.3rem] text-pretty sm:w-[70%] w-[80%]'
+      >
         “ Amaizing fast and reliable customer support! The team of willing to go
         mile for customer service! ”
       </p>
-      <h3 class='w-[70%] font-main'>Jordyn Dorwart</h3>
+      <h3 class='sm:w-[70%] w-[80%] font-main'>Jordyn Dorwart</h3>
     </div>
   </article>
 </section>

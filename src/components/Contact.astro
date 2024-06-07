@@ -1,12 +1,16 @@
 ---
 import { Image } from 'astro:assets'
 import image from '@assets/contact-image.avif'
+import ButtonPrimary from './ButtonPrimary.astro'
 ---
 
 <section
-  class='bg-main pl-[130px] pr-[130px] flex justify-between rounded-br-[15em] pb-20'
+  id='contact'
+  class='bg-main sm:pl-[130px] sm:pr-[130px] flex justify-between rounded-br-[15em] pb-20'
 >
-  <article class='w-2/3 pt-10 pl-10 flex flex-col items-start gap-y-5'>
+  <article
+    class='sm:w-2/3 pt-10 pl-10 flex flex-col items-start sm:gap-y-5 gap-y-10'
+  >
     <h2 class='font-title text-[3rem] max-w-[65%] text-balance'>
       Intereste in Working with Us?
     </h2>
@@ -15,12 +19,9 @@ import image from '@assets/contact-image.avif'
       are interested in working with us, please visit our website and fill out
       the application form.
     </p>
-    <button
-      class='bg-primary px-5 py-1 rounded-full text-white font-text font-semibold text-[1.2rem]'
-      >Contact</button
-    >
+    <ButtonPrimary>Contact us</ButtonPrimary>
   </article>
-  <picture>
+  <picture class='sm:flex hidden'>
     <Image
       src={image}
       alt='Image about interior design'
